@@ -1,0 +1,8 @@
+install.packages('BiocManager')
+library(BiocManager)
+install(c('tximport', 'DESeq2', 'biomaRt', 'pheatmap'))
+library(tximport)
+library(DESeq2)
+library(biomaRt)
+library(pheatmap)
+library(tidyverse)
