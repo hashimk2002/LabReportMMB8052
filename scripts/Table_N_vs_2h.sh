@@ -1,0 +1,6 @@
+results_tableNvs2 = results(dds, contrast= c('Group', 'Allo2h', 'Naive'))
+summary(results_tableNvs2)
+results_tibbleNvs2 = as_tibble(results_tableNvs2, rownames='ensembl_gene_id')
+filtered_resultsNvs2 = filter(results_tibbleNvs2, complete.cases(results_tibbleNvs2))
+filtered_resultsNvs2 = mutate(filtered_resultsNvs2, logPVal = -log10(padj))
+filtered_resultsNvs2 = mutate(filtered_resultsNvs2, Significant = padj<0.05)
