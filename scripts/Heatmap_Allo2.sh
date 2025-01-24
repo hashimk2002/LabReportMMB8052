@@ -1,4 +1,5 @@
 #A Heatmap table is generated with regularised logarithm values and the ensemble gene names and the more readable names to produce the heatmap#
+#Top20_22 has been obtained in annotatingres2.sh#
 HTMAP=assay(rld)[Top20_2$ensembl_gene_id,]
 colnames(HTMAP)=row.names(sample_table)
 row.names(HTMAP)=Top20_2$external_gene_name
