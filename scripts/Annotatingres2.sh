@@ -10,4 +10,4 @@ annot_results2 = left_join(filtered_resultsNvs2, annotation)
 annot_results2 = arrange(annot_results2, padj)
 
 degs2 = filter(annot_results2, abs(log2FoldChange) > 1 & padj < 0.05)
-Top20_2=slice_head(arrange(annot_results2, desc(abs(log2FoldChange))), n=20)
+Top20_2=slice_head(arrange(degs2, desc(abs(log2FoldChange))), n=20)
