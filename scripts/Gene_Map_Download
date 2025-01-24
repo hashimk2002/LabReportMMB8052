@@ -1,1 +1,2 @@
+#read_csv is used here to download the mapping information to determine which transcript ids map to which gene ids#
 gene_map = read_csv('https://github.com/sjcockell/mmb8052/raw/main/practicals/practical_08/extdata/gene_map.csv')
