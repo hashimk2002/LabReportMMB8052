@@ -9,4 +9,4 @@ annotation24 = getBM(attributes=c('ensembl_gene_id', 'chromosome_name',
 annot_results24 = left_join(filtered_resultsNvs24, annotation)
 annot_results24 = arrange(annot_results24, padj)
 degs24 = filter(annot_results24, abs(log2FoldChange) > 1 & padj < 0.05)
-Top20_24=slice_head(arrange(annot_results24, desc(abs(log2FoldChange))), n=20)
+Top20_24=slice_head(arrange(degs24, desc(abs(log2FoldChange))), n=20)
